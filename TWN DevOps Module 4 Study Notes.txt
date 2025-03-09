@@ -1,0 +1,101 @@
+1. Introduction to build and package manager tools  
+   -> watched video that provided an introduction to the concept of build tools and package managers  
+   -> build tools are used to automate the process of building software. package managers help in managing dependencies and libraries in the development environment
+
+2. Install build tools  
+   -> watched video covering the installation of build tools  
+   -> instruction provided for installing essential tools on different platforms (Windows, macOS, Linux)  
+   -> go to specific installation guides for Windows or macOS/Unix  
+   -> useful links for installations:  
+     -> Maven: https://maven.apache.org/install.html  
+     -> Gradle: https://gradle.org/install/  
+     -> Node.js: https://nodejs.org/en/download/ (npm comes with Node.js)
+
+3. Windows installation help - part 1 + 2  
+   -> watched video on setting up build tools on Windows  
+   -> successfully installed all the necessary build tools (Java, Maven, Gradle, Node.js)  
+   -> useful links for Java on Windows:  
+     -> Java installation guide for Windows: https://docs.oracle.com/en/java/javase/17/install/installation-jdk-microsoft-windows-platforms.html#GUID-0DB9580B-1ACA-4C13-8A83-9780BEDF30BB
+
+4. MacOS/unix installation help  
+   -> watched video on setting up build tools on macOS and Unix  
+   -> successfully installed all the necessary tools  
+   -> useful links:  
+     -> Homebrew package manager: https://brew.sh/  
+     -> Java installation on Mac/Linux: use your OS package manager (e.g., Homebrew on macOS)
+
+5. Build artifact  
+   -> watched video explaining the concept of a "build artifact"  
+   -> successfully executed a demo where I built artifacts for Java, Gradle, and Maven projects  
+   -> artifact: a build artifact is the final product after the code has been compiled, packaged, and bundled, ready for deployment  
+     -> example artifacts: JAR (Java Archive), WAR (Web Application Archive), ZIP, TAR files
+
+6. Build tools for development  
+   -> watched video discussing the role of build tools in managing dependencies and automating tasks in development  
+   -> successfully executed a demo where I added a new dependency to a project using Maven or Gradle  
+   -> a dependency is a library or framework required for the project to run. for example, using a library like Spring in a Java project  
+     -> dependencies are defined in configuration files such as pom.xml (for Maven) or build.gradle (for Gradle)
+
+7. Run the application  
+   -> watched video on how to run applications using build tools  
+   -> successfully ran an application using a previously built artifact (JAR file)  
+   -> in a typical scenario, a developer might run an application locally using the build tool commands to ensure functionality
+
+8. Build JavaScript applications  
+   -> watched video explaining how to build JavaScript applications using npm (Node Package Manager) and Yarn  
+   -> successfully executed a demo where I built a JavaScript application  
+   -> artifacts in JavaScript: JavaScript applications typically don't have a specific "artifact" format. they may be packaged as ZIP or TAR files for deployment
+
+9. Other programming languages  
+   -> watched video introducing build tools for other programming languages like Python, C/C++, Ruby, etc  
+   -> the principles of build tools are similar across languages, though the specific tools and commands may differ  
+     -> for Python: pip (Python package manager)  
+     -> for C/C++: Conan (C/C++ package manager)  
+     -> for Ruby: RubyGems
+
+10. Publish artifact  
+   -> watched video explaining how to publish an artifact after building it  
+   -> the process involves pushing the artifact (e.g., JAR, WAR, ZIP) to a repository like Nexus or JFrog Artifactory  
+   -> once the artifact is in the repository, it can be downloaded and used on different servers or machines for deployment
+
+11. Build tools & Docker  
+   -> watched video introducing the concept of using Docker alongside build tools  
+   -> Docker simplifies deployment by packaging the application and all its dependencies into a Docker image, which acts as a unified artifact  
+     -> Docker eliminates the need to worry about different artifact types (e.g., JAR, WAR files) and allows everything to be encapsulated within a single image
+
+12. Build tools & DevOps  
+   -> watched video discussing how DevOps engineers use build tools in the context of CI/CD pipelines and automation  
+   -> the role of a DevOps engineer involves configuring tools to automate the entire build, test, and deployment process  
+     -> key tasks include setting up Jenkins, GitLab CI, or other CI/CD tools to automate the building, testing, and deployment of applications
+
+13. Build tools & package manager for different programming languages  
+   -> Java: Maven | Gradle  
+   -> JavaScript: npm | Yarn | Webpack  
+   -> Python: pip  
+   -> C/C++: Conan  
+   -> C#: NuGet  
+   -> GoLang: dep  
+   -> Ruby: RubyGems  
+   -> useful links:  
+     -> Maven Repository: https://mvnrepository.com/  
+     -> npm Repository: https://www.npmjs.com/package/repository
+
+14. What are build and package manager tools?  
+   -> build and package manager tools are used to automate and manage the process of building applications and managing dependencies  
+     -> these tools help developers avoid manual errors and ensure that dependencies are handled automatically  
+     -> the build process typically involves compiling the source code, packaging the compiled code into an artifact (e.g., JAR, WAR, ZIP), and ensuring that the application is ready for deployment
+
+15. What is an artifact?  
+   -> an artifact is the final product of the build process, which includes the compiled application code along with all necessary dependencies (libraries, frameworks)  
+     -> examples of artifacts: JAR (Java Archive), WAR (Web Application Archive) files, ZIP files, TAR files  
+     -> artifacts are used for deployment, and they can be stored in artifact repositories like Nexus or JFrog Artifactory for future use
+
+16. What does "building the code" mean?  
+   -> "building the code" involves several tasks:  
+     -> compiling: translating source code into executable code  
+     -> compressing: making the application code smaller for efficient storage and transmission  
+     -> packaging: combining multiple files into a single file, like a JAR or WAR file, for easier deployment
+
+17. What is an artifact repository?  
+   -> an artifact repository is a storage location for your build artifacts  
+     -> examples: Nexus Repository, JFrog Artifactory

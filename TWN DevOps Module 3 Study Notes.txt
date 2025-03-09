@@ -1,0 +1,187 @@
+-> Version control with Git
+
+ 1. What is version control?
+   -> definition:  
+     version control, also known as source control, is the practice of tracking and managing changes to software code over time
+   -> purpose:  
+     allows multiple developers to work on the same project simultaneously without interfering with each other's work
+   -> why it's needed:  
+     -> enables tracking changes in codebase  
+     -> allows reverting to previous code versions  
+     -> facilitates collaboration among multiple team members
+
+ 2. Code repository
+   -> remote hosting:  
+     the code is hosted on a central server (e.g., GitHub, GitLab, Bitbucket) making it accessible to all developers
+   -> local copy:  
+     every developer has their own local copy of the repository. changes are made locally before pushing them to the remote repository
+
+ 3. Basic concepts of version control
+   -> history of changes:  
+     every change is tracked and stored. this allows developers to review past versions, revert if necessary, and collaborate effectively
+   -> tracking changes:  
+     every change (commit) is stored with a unique id and a commit message describing the change
+
+   -> commit message example:  
+     -> version 1  
+     -> version 2  
+     -> fix button issue  
+     -> add list for feature xyz  
+
+ 4. Git as the most used version control system
+   -> Git is widely used due to its speed, flexibility, and distributed nature. each developer has a full version of the repository on their machine, reducing reliance on a single central server
+
+ 5. Basic concepts of Git
+   -> remote Git repository:  
+     the location where the code is hosted, usually on platforms like GitHub, GitLab, or Bitbucket
+   -> local Git repository:  
+     a local copy of the repository on your machine. changes are made locally before pushing them to the remote repository
+   -> Git client:  
+     tools (ui or command line) used to interface with Git repositories. examples include Git CLI, GitHub Desktop, Sourcetree, etc
+
+   -> key operations:
+     -> Git pull: fetches updates from the remote repository to synchronise your local repository
+     -> Git push: sends your local changes to the remote repository
+
+ 6. Merging changes & resolving conflicts
+   -> automatic merging:  
+     Git can automatically merge changes most of the time, but conflicts arise when two developers modify the same line of code or file
+   -> merge conflict:  
+     occurs when two branches have different changes on the same line. Git cannot merge them automatically, and the developer must manually resolve the conflict
+   -> best practice:  
+     -> push and pull frequently to keep your local repository up-to-date with the remote repository
+     -> this reduces the likelihood of conflicts and ensures your local changes are always aligned with the latest version
+
+ 7. Working with Git
+   -> staging changes (`Git add <file>`):  
+     moves changes from the working directory to the staging area. this allows developers to prepare specific changes to be committed
+   -> committing changes (`Git commit -m "message"`):  
+     saves changes in the local repository with a descriptive message explaining what the change is
+     -> example: `Git commit -m "added list feature"`
+   -> pushing changes (`Git push`):  
+     after committing, you push the changes to the remote repository, making them available to other developers
+   -> pulling changes (`Git pull`):  
+     updates your local repository with changes from the remote repository, bringing your code in sync with the latest commits
+
+ 8. Setting up Git repositories
+   -> remote repository:  
+     -> set up a repository on platforms like GitHub or GitLab
+     -> clone it to your local machine using `Git clone <repository_url>`
+   -> local repository:  
+     -> initialise a new Git repository using `Git init`
+     -> use `Git remote add origin <repository_url>` to link it with a remote repository
+
+ 9. Branching in Git
+   -> what is a branch?  
+     a branch is an independent line of development in Git. you can create branches to work on specific features or bug fixes without affecting the main project codebase (typically the `main` or `master` branch)
+   -> branching best practices:  
+     -> one branch per feature or bug fix to keep things organised
+     -> example: `feature/add-user-login`, `bugfix/fix-typo-in-header`
+   -> merging branches:  
+     once the feature or bugfix is complete, you merge it back into the main branch to include the changes in the main project
+     -> this can be done with a merge request (GitLab) or pull request (GitHub)
+
+ 10. Merge requests / pull requests
+   -> purpose:  
+     merge or pull requests are used to propose changes in one branch and request their inclusion into another branch (usually `main` or `develop`)
+   -> code review:  
+     a peer or team member reviews the changes before the merge is accepted, helping to catch potential bugs, issues, or code quality concerns
+   -> approval process:  
+     the reviewer can approve or reject the merge, ensuring the changes meet the project's quality standards
+
+ 11. Why Git is essential for devops engineers
+   -> infrastructure as code (IaC):  
+     devops engineers use Git to track and manage configuration files and scripts for infrastructure automation, ensuring consistency and versioning of infrastructure
+   -> automation scripts:  
+     devops engineers write automation scripts (e.g., Python) to automate tasks such as provisioning infrastructure, deployment, and monitoring. these scripts are versioned using Git
+   -> CI/CD pipeline:  
+     Git integrates with CI/CD tools (like Jenkins or GitLab CI) to automate the build, test, and deployment process
+     -> example: Git commits trigger a CI/CD pipeline to test, build, and deploy the code
+
+ 12. Git best practices
+   -> commit messages:  
+     always write descriptive commit messages that explain what was changed and why
+     -> example: `fix issue with login form validation`
+   -> frequent commits:  
+     make commits often to keep changes manageable and to make it easier to revert to earlier states if necessary
+   -> branch management:  
+     keep your feature or bugfix branches up-to-date with the remote `main` or `develop` branch to avoid large conflicts
+   -> avoid force push:  
+     be careful with `Git push --force` as it overwrites changes in the remote repository, which can lead to data loss
+   -> code reviews:  
+     before merging changes into the main branch, always have a peer review your code for mistakes or areas of improvement
+
+-> database in software development
+
+ 1. Crud operations
+   -> definition:  
+     crud stands for create, read, update, delete – the four basic operations you can perform on a database
+   -> use cases:  
+     every application interacting with a database uses crud operations to manage data
+
+ 2. Database setup
+   -> local databases:  
+     developers set up local databases for testing new features or running applications
+   -> shared remote databases:  
+     a remote database can be shared among developers, ensuring that all team members work with the same data
+
+ 3. Configuring database connections
+   -> environment variables:  
+     database connection details (e.g., endpoint, credentials) should be defined as environment variables rather than hardcoding them into the application code
+   -> best practices:  
+     -> don't store database credentials in source code
+     -> use separate environment variables for different environments (e.g., dev, test, prod)
+
+ 4. Types of databases
+   -> key-value databases:  
+     -> examples: Redis, Memcached  
+     -> characteristics: simple, fast, stores data in key-value pairs
+     -> use cases: caching, session management
+
+   -> wide-column databases:  
+     -> examples: Cassandra, HBase  
+     -> characteristics: data stored in tables but rows can have different columns
+     -> use cases: time-series data, IoT records
+
+   -> document databases:  
+     -> examples: MongoDB, CouchDB  
+     -> characteristics: stores data in flexible, JSON-like documents
+     -> use cases: mobile apps, content management systems (CMS)
+
+   -> relational databases:  
+     -> examples: MySQL, PostgreSQL  
+     -> characteristics: data stored in tables with a fixed schema
+     -> use cases: structured data where relationships between data need to be defined
+     -> ACID compliance: ensures data integrity through atomicity, consistency, isolation, and durability
+
+   -> graph databases:  
+     -> examples: Neo4j, Dgraph  
+     -> characteristics: stores data as nodes and relationships, ideal for managing relationships and networks
+     -> use cases: social networks, recommendation engines
+
+   -> search-engine databases:  
+     -> examples: Elasticsearch, Solr  
+     -> characteristics: optimised for fast, full-text search capabilities
+     -> use cases: search engines, data indexing
+
+ 5. Database types comparison
+   -> SQL vs NoSQL:  
+     -> SQL (relational): uses predefined schema and structured queries (e.g., MySQL, PostgreSQL)
+     -> NoSQL (non-relational): flexible schema, can handle unstructured data (e.g., MongoDB, Redis)
+
+ 6. Databases in production
+   -> backup and security:  
+     -> regular backups and replication for fault tolerance
+     -> security practices include encryption and access control
+
+   -> performance and scalability:  
+     -> ensure databases can scale to handle high loads
+     -> monitor database performance and optimise queries
+
+ 7. Best practices for database management
+   -> use the right database for the right task:  
+     select a database type based on your application's needs (e.g., use graph DBs for relationship-heavy data)
+   -> data security:  
+     ensure that sensitive data is encrypted and access is tightly controlled
+   -> regular backups:  
+     always have automated backups in place, especially for production databases
